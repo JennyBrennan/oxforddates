@@ -5,7 +5,47 @@
 </head>
 <body>
   <h1>What date is it in the real world?</h1>
+<form method="post" action='/'>
+	<div class="form-group">
+      	<label for="InputDay">Day</label>
+      		<select name='day'>
+      			<option value="0">Sunday</option>
+      			<option value="1">Monday</option>
+      			<option value="2">Tuesday</option>
+      			<option value="3">Wednesday</option>
+      			<option value="4">Thursday</option>
+      			<option value="5">Friday</option>
+      			<option value="6">Saturday</option>
+      		</select>
+      	<label for="InputWeek">Weel</label>
+      		<select name='week'>
+      			<option value="0">0th</option>
+      			<option value="1">1st</option>
+      			<option value="2">2nd</option>
+      			<option value="3">3rd</option>
+      			<option value="4">4th</option>
+      			<option value="5">5th</option>
+      			<option value="6">6th</option>
+      			<option value="7">7th</option>
+      			<option value="8">8th</option>
+      		</select>
+      	<label for="InputTerm">Term</label>
+      		<select name='term'>
+      			<option value="michaelmas">Michaelmas</option>
+      			<option value="hilary">Hilary</option>
+      			<option value="trinity">Trinity</option>
+      		</select>
+      	</div>
+      	<label for="InputYear">Year</label>
+      		<select name='year'>
+      			<option value="2015">2015</option>
+      			<option value="2016">2016</option>
+      		</select>
+      	</div>
+      		<button type='submit' class="btn btn-primary">Submit</button>
+    </form>
 
+    <h2><%= @week %> date is <%= @rd %></h2>
   
 
 </body>
