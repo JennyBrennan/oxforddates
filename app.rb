@@ -3,7 +3,11 @@ require 'csv'
 require 'date'
 
 get '/' do
+
+	@postrequest = false
+
   erb :index
+
 end
 
 post '/' do
@@ -11,6 +15,7 @@ post '/' do
 	@week = params[:week].to_i
 	@term = params[:term]
 	@year = params[:year]
+	@postrequest = true
 
 	if @year == '2015'
 		if @term == 'hilary'

@@ -17,7 +17,7 @@
       			<option value="5">Friday</option>
       			<option value="6">Saturday</option>
       		</select>
-      	<label for="InputWeek">Weel</label>
+      	<label for="InputWeek">Week</label>
       		<select name='week'>
       			<option value="0">0th</option>
       			<option value="1">1st</option>
@@ -43,9 +43,11 @@
       		</select>
       	</div>
       		<button type='submit' class="btn btn-primary">Submit</button>
-    </form>
+      </form>
 
-    <h2><%= @week %> date is <%= @rd %></h2>
+      <% if @postrequest %>
+            <h2>Week <%= @week %> of <%= @term.capitalize %> <%= @year %> is <%= @rd.strftime("%d %B %Y") %> in the real world</h2>
+      <% end %>
   
 
 </body>
